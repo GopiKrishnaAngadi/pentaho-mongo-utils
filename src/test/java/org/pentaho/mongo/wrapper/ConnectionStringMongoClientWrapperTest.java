@@ -150,7 +150,11 @@ public class ConnectionStringMongoClientWrapperTest {
   public void testGetAllTagsNoDB() throws MongoDbException {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
+<<<<<<< HEAD
       BaseMessages.getString( PKG, "MongoConnectionStringWrapper.Message.Warning.LocalDBNotAvailable" ) );
+=======
+      BaseMessages.getString( PKG, "MongoNoAuthWrapper.Message.Warning.LocalDBNotAvailable" ) );
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -160,7 +164,11 @@ public class ConnectionStringMongoClientWrapperTest {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
       BaseMessages.getString( PKG,
+<<<<<<< HEAD
       "MongoConnectionStringWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) );
+=======
+      "MongoNoAuthWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) );
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -175,7 +183,11 @@ public class ConnectionStringMongoClientWrapperTest {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+=======
+                    "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -188,7 +200,11 @@ public class ConnectionStringMongoClientWrapperTest {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+=======
+                    "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -202,7 +218,11 @@ public class ConnectionStringMongoClientWrapperTest {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+=======
+                    "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -312,7 +332,11 @@ public class ConnectionStringMongoClientWrapperTest {
       Mockito.verify( mockDB ).getCollection( "collection" );
       Assert.assertThat( e.getMessage(),
         StringContains.containsString( BaseMessages.getString( PKG,
+<<<<<<< HEAD
                "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
+=======
+               "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection",
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
               "collection" ) ) );
     }
   }
@@ -327,7 +351,11 @@ public class ConnectionStringMongoClientWrapperTest {
       Mockito.verify( mockDB ).getCollection( "collection" );
       Assert.assertThat( e.getMessage(),
         StringContains.containsString( BaseMessages.getString( PKG,
+<<<<<<< HEAD
              "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
+=======
+             "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection",
+>>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
              "collection" ) ) );
     }
   }
