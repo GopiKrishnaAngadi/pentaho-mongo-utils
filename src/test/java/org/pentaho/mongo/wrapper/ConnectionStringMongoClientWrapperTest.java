@@ -1,3 +1,19 @@
+/*!
+  * Copyright 2010 - 2021 Hitachi Vantara.  All rights reserved.
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  * http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  *
+  */
 package org.pentaho.mongo.wrapper;
 
 import com.mongodb.*;
@@ -151,10 +167,14 @@ public class ConnectionStringMongoClientWrapperTest {
     List<String> tags = connectionStringMongoClientWrapper.getAllTags();
     Mockito.verify( mockMongoUtilLogger ).info(
 <<<<<<< HEAD
+<<<<<<< HEAD
       BaseMessages.getString( PKG, "MongoConnectionStringWrapper.Message.Warning.LocalDBNotAvailable" ) );
 =======
       BaseMessages.getString( PKG, "MongoNoAuthWrapper.Message.Warning.LocalDBNotAvailable" ) );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+      BaseMessages.getString( PKG, "MongoConnectionStringWrapper.Message.Warning.LocalDBNotAvailable" ) );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -165,10 +185,14 @@ public class ConnectionStringMongoClientWrapperTest {
     Mockito.verify( mockMongoUtilLogger ).info(
       BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "MongoConnectionStringWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) );
 =======
       "MongoNoAuthWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+      "MongoConnectionStringWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -184,10 +208,14 @@ public class ConnectionStringMongoClientWrapperTest {
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 =======
                     "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+                    "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -201,10 +229,14 @@ public class ConnectionStringMongoClientWrapperTest {
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 =======
                     "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+                    "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -219,10 +251,14 @@ public class ConnectionStringMongoClientWrapperTest {
     Mockito.verify( mockMongoUtilLogger ).info(
             BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 =======
                     "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+                    "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" ) );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     Assert.assertThat( tags.size(), IsEqual.equalTo( 0 ) );
   }
 
@@ -333,10 +369,14 @@ public class ConnectionStringMongoClientWrapperTest {
       Assert.assertThat( e.getMessage(),
         StringContains.containsString( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
 =======
                "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection",
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+               "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
               "collection" ) ) );
     }
   }
@@ -352,10 +392,14 @@ public class ConnectionStringMongoClientWrapperTest {
       Assert.assertThat( e.getMessage(),
         StringContains.containsString( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
              "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
 =======
              "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection",
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+             "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection",
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
              "collection" ) ) );
     }
   }

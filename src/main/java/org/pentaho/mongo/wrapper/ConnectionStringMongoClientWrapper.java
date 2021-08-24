@@ -1,3 +1,19 @@
+/*!
+ * Copyright 2010 - 2021 Hitachi Vantara.  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 package org.pentaho.mongo.wrapper;
 
 import com.mongodb.*;
@@ -81,6 +97,7 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
       if ( db == null ) {
         throw new MongoDbException(
 <<<<<<< HEAD
+<<<<<<< HEAD
           BaseMessages.getString( PKG, "MongoConnectionStringWrapper.ErrorMessage.NonExistentDB", dbName ) ); //$NON-NLS-1$
       }
       if ( Util.isEmpty( collection ) ) {
@@ -93,6 +110,13 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
         throw new MongoDbException(
                 BaseMessages.getString( PKG, "MongoNoAuthWrapper.ErrorMessage.NoCollectionSpecified" ) ); //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+          BaseMessages.getString( PKG, "MongoConnectionStringWrapper.ErrorMessage.NonExistentDB", dbName ) ); //$NON-NLS-1$
+      }
+      if ( Util.isEmpty( collection ) ) {
+        throw new MongoDbException(
+                BaseMessages.getString( PKG, "MongoConnectionStringWrapper.ErrorMessage.NoCollectionSpecified" ) ); //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
       }
       if ( !db.collectionExists( collection ) ) {
         db.createCollection( collection, null );
@@ -101,10 +125,14 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
       if ( coll == null ) {
         throw new MongoDbException( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
         "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
 =======
         "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+        "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
          collection ) );
       }
       List<DBObject> collInfo = coll.getIndexInfo();
@@ -112,10 +140,14 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
       if ( collInfo == null || collInfo.isEmpty() ) {
         throw new MongoDbException( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
 =======
                       "MongoNoAuthWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+                      "MongoConnectionStringWrapper.ErrorMessage.UnableToGetInfoForCollection", //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
                       collection ) );
       }
       for ( DBObject index : collInfo ) {
@@ -124,10 +156,14 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
       return result;
     }   catch ( Exception e ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       log.error( BaseMessages.getString( PKG, "MongoConnectionStringWrapper.ErrorMessage.GeneralError.Message" ) //$NON-NLS-1$
 =======
       log.error( BaseMessages.getString( PKG, "MongoNoAuthWrapper.ErrorMessage.GeneralError.Message" ) //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+      log.error( BaseMessages.getString( PKG, "MongoConnectionStringWrapper.ErrorMessage.GeneralError.Message" ) //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
           + ":\n\n" + e.getMessage(), e ); //$NON-NLS-1$
       if ( e instanceof MongoDbException ) {
         throw (MongoDbException) e;
@@ -198,10 +234,14 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
   private BasicDBList getRepSetMemberRecords() throws MongoDbException {
     String noReplicaSetMembersDefined = BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
               "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" );
 =======
               "MongoNoAuthWrapper.Message.Warning.NoReplicaSetMembersDefined" );
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+              "MongoConnectionStringWrapper.Message.Warning.NoReplicaSetMembersDefined" );
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
     BasicDBList setMembers = null;
     try {
       DB local = getDb( LOCAL_DB );
@@ -233,19 +273,27 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
           // log that the replica set collection is not available
           logInfo( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
             "MongoConnectionStringWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) ); //$NON-NLS-1$
 =======
             "MongoNoAuthWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) ); //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+            "MongoConnectionStringWrapper.Message.Warning.ReplicaSetCollectionUnavailable" ) ); //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
         }
       } else {
       // log that the local database is not available!!
         logInfo(
 <<<<<<< HEAD
+<<<<<<< HEAD
           BaseMessages.getString( PKG, "MongoConnectionStringWrapper.Message.Warning.LocalDBNotAvailable" ) ); //$NON-NLS-1$
 =======
           BaseMessages.getString( PKG, "MongoNoAuthWrapper.Message.Warning.LocalDBNotAvailable" ) ); //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+          BaseMessages.getString( PKG, "MongoConnectionStringWrapper.Message.Warning.LocalDBNotAvailable" ) ); //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
       }
     } catch ( Exception ex ) {
       throw new MongoDbException( ex );
@@ -280,10 +328,14 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
       } else {
         throw new MongoDbException( BaseMessages.getString( PKG,
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "MongoConnectionStringWrapper.ErrorMessage.UnableToGetReplicaSetMembers" ), ex ); //$NON-NLS-1$
 =======
                       "MongoNoAuthWrapper.ErrorMessage.UnableToGetReplicaSetMembers" ), ex ); //$NON-NLS-1$
 >>>>>>> 5676141 ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
+=======
+                      "MongoConnectionStringWrapper.ErrorMessage.UnableToGetReplicaSetMembers" ), ex ); //$NON-NLS-1$
+>>>>>>> b7f8b9e ([PDI-17853] Need support to connect with MongoDB Atlas using latest SRV connection string)
       }
     }
   }
@@ -306,17 +358,10 @@ public class ConnectionStringMongoClientWrapper implements MongoClientWrapper {
               // does replica set member m's tags contain this tag?
               Object matchVal = tags.get( tagName );
 
-              if ( matchVal == null ) {
-                match = false; // doesn't match this particular tag set
-                // no need to check any other keys in toMatch
-                break;
-              }
-
-              if ( !matchVal.toString().equals( tagValue ) ) {
+              if ( matchVal == null || !matchVal.toString().equals( tagValue )) {
                 // rep set member m's tags has this tag, but it's value does not
                 // match
-                match = false;
-
+                match = false; // doesn't match this particular tag set
                 // no need to check any other keys in toMatch
                 break;
               }
